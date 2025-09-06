@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Builder Buddy",
+    "subtitle": "Built with Zara",
+    "description": "Builder Buddy is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app",
+    "splashImageUrl": "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app/image.png",
+    "tagline": "Builder Buddy",
+    "screenshotUrls": [
+      "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app/screenshot.png",
+      "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://3fd6006bb8324c1dacc5efbd870e0abf-ag1l.vercel.app/api/webhook"
+  }
+}
