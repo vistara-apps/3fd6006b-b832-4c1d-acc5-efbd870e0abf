@@ -12,6 +12,7 @@ export function Button({
   onClick,
   children,
   className = '',
+  ...props
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -35,6 +36,7 @@ export function Button({
       className={cn(baseStyles, variants[variant], sizes[size], className)}
       disabled={disabled || loading}
       onClick={onClick}
+      {...props}
     >
       {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
       {children}

@@ -78,7 +78,7 @@ export interface ApiResponse<T> {
 }
 
 // Component prop types
-export interface ButtonProps {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'outline' | 'destructive' | 'secondary' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
