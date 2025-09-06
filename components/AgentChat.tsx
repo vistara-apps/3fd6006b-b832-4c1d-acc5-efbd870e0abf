@@ -5,7 +5,7 @@ import { Send, Bot, User, Loader2 } from 'lucide-react';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { Card } from './ui/Card';
-import { Avatar } from './ui/Avatar';
+
 import { generateChatResponse, generateScopingQuestions, validateIdea } from '@/lib/openai';
 import { type ChatMessage, type ScopingDetails, type ValidationFeedback } from '@/lib/types';
 import { SCOPING_QUESTIONS } from '@/lib/utils';
@@ -144,9 +144,9 @@ export function AgentChat({
     <Card className={`flex flex-col ${isCompact ? 'h-96' : 'h-[600px]'}`}>
       {/* Header */}
       <div className="flex items-center gap-3 pb-4 border-b border-white border-opacity-20">
-        <Avatar size="sm">
-          <Bot className="w-4 h-4" />
-        </Avatar>
+        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center">
+          <Bot className="w-4 h-4 text-white" />
+        </div>
         <div>
           <h3 className="font-semibold text-white">Builder Buddy AI</h3>
           <p className="text-sm text-white text-opacity-60">Your AI co-pilot</p>
@@ -161,9 +161,9 @@ export function AgentChat({
             className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             {message.role === 'assistant' && (
-              <Avatar size="sm">
-                <Bot className="w-4 h-4" />
-              </Avatar>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center">
+                <Bot className="w-4 h-4 text-white" />
+              </div>
             )}
             <div
               className={`max-w-[80%] p-3 rounded-lg ${
@@ -178,18 +178,18 @@ export function AgentChat({
               </p>
             </div>
             {message.role === 'user' && (
-              <Avatar size="sm">
-                <User className="w-4 h-4" />
-              </Avatar>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 flex items-center justify-center">
+                <User className="w-4 h-4 text-white" />
+              </div>
             )}
           </div>
         ))}
         
         {isLoading && (
           <div className="flex gap-3 justify-start">
-            <Avatar size="sm">
-              <Bot className="w-4 h-4" />
-            </Avatar>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center">
+              <Bot className="w-4 h-4 text-white" />
+            </div>
             <div className="bg-white bg-opacity-10 text-white p-3 rounded-lg">
               <div className="flex items-center gap-2">
                 <Loader2 className="w-4 h-4 animate-spin" />
